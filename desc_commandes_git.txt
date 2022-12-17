@@ -1,0 +1,32 @@
+Les commandes "git" pour initialiser un repértoire en local:
+    * git init 
+
+    # configuration de l'auteur des commits
+    * git config --local user.email "ton adresse email" 
+    --> ex: git config --local user.email "john.doe@email.com"
+
+    * git config --local user.name "ton nom et/ou prenom" 
+    --> ex: git config --local user.email "John Doe"
+
+    # établissement de la liaison entre le serveur distant et repo local
+    * git remote add {nom du dépôt distant} https://dépôt-distant/
+    --> ex: git remote add origin https://github.com ou https://gitlab.com/
+
+    # Lier une branche du serveur distant au repo local
+    * git pull --rebase {nom du dépôt distant} {nom de la branche}
+    --> ex: git pull --rebase origin main
+
+Les commandes "git" pour envoyer les modifications sur le serveur distant:
+    # Ajout des modifications dans le staging
+    * git add . 
+
+    # Attribution de message aux modifications stager
+    * git commit -m "Message de commit"
+    --> ex: git commit "Implémentation en utilisant le modèle MVC"
+
+    # s'il s'agit d'un premier push, il faut utiliser cette commande:
+    *  git push -u {nom du dépôt distant} {nom de la branche}
+    --> ex: git push -u origin main
+
+    # sinon:
+    git push
